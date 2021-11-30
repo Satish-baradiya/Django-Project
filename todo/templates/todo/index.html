@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>TodoApp</title>
+    </head>
+
+    <body>
+        <h1>Todo</h1>
+        <h3>__________________________________________________________________________________________________________
+        </h3>
+        {% for i in todo %}
+        Title : {{ i.title }}<br>
+        Description : {{ i.description }}<br>
+        <a href="{% url 'remove' %}">Delete</a>
+        <h3>__________________________________________________________________________________________________________
+        </h3>
+        {% endfor %}
+        <a href="{% url 'add' %}">Add Todo</a>
+    </body>
+
+</html>

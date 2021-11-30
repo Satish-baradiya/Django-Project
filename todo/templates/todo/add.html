@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            AddTodo
+        </title>
+    </head>
+
+    <body>
+        <form method="post" action="{% url 'add' %}">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="description" placeholder="Description">
+            <input type="submit" label="Submit">
+        </form>
+    </body>
+
+</html>
